@@ -1,41 +1,31 @@
-<!-- Файл: pages/index.vue -->
+<template>
+  <div>
+    <h1>Информация о репозиториях</h1>
+    <RepositoryCard v-for="repo in repositories" :key="repo.full_name" :repository="repo" />
+  </div>
+</template>
+
 <script setup>
-import axios from 'axios';
-import { useRuntimeConfig } from '#imports';
+import github from '@/components/api/git.js';
+import { ref, onMounted } from 'vue';
 import RepositoryCard from '../components/RepositoryCard.vue';
 
-// Получаем конфигурацию и проверяем наличие токена
-const config = useRuntimeConfig();
-const repository = ref(null);
+const repositories = ref([]);
 
 onMounted(async () => {
-  try {
-    // Используем config.public.GITHUB_TOKEN для передачи токена
-    const repoResponse = await axios.get('https://api.github.com/repos/vuejs/vue', {
-      headers: {
-        Authorization: `Bearer ${config.public.GITHUB_TOKEN}`, // Используем корректное имя токена
-      },
-    });
+  const repoNames = [
+    'vuejs/vue',            // Репозиторий Vue
+    'i5anin/portfolio',     // Ваш репозиторий
+    // ...другие репозитории
+  ];
 
-    // Сохраняем данные о репозитории, включая дату последнего коммита и количество коммитов
-    repository.value = {
-      name: repoResponse.data.name,
-      pushed_at: repoResponse.data.pushed_at,
-      full_name: repoResponse.data.full_name,
-      commitCount: repoResponse.data.open_issues_count, // Параметр для общего количества коммитов
-    };
+  try {
+    repositories.value = await github.getRepositoriesData(repoNames);
   } catch (error) {
-    console.error('Ошибка при загрузке данных репозитория:', error);
+    console.error('Ошибка при загрузке данных репозиториев:', error);
   }
 });
 </script>
-
-<template>
-  <div>
-    <h1>Информация о репозитории</h1>
-    <RepositoryCard v-if="repository" :repository="repository" />
-  </div>
-</template>
 
 <style scoped>
 h1 {
