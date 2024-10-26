@@ -2,6 +2,17 @@
   <div>
     <h1>Информация о репозиториях</h1>
     <RepositoryCard v-for="repo in repositories" :key="repo.full_name" :repository="repo" />
+    <div v-if="repositories.length > 0">
+      <h2>Последние коммиты:</h2>
+      <ul>
+        <li v-for="repo in repositories" :key="repo.full_name">
+          <strong>{{ repo.full_name }}:</strong>
+          <div>Сообщение: {{ repo.latestCommit.message }}</div>
+          <div>Дата: {{ new Date(repo.latestCommit.date).toLocaleString() }}</div>
+          <div>Дата: {{ new Date(repo.latestCommit.date).toLocaleString() }}</div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
