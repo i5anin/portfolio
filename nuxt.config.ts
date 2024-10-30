@@ -1,5 +1,8 @@
+// nuxt.config.ts
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  css: ['bootstrap/dist/css/bootstrap.min.css'],
+  plugins: [{ src: '~/plugins/bootstrap.client.ts', mode: 'client' }],
   runtimeConfig: {
     // Эти переменные будут доступны только на сервере
     apiSecret: process.env.API_SECRET,
@@ -10,4 +13,4 @@ export default defineNuxtConfig({
       GITHUB_TOKEN: process.env.GITHUB_TOKEN
     }
   }
-})
+});
