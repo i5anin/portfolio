@@ -1,7 +1,11 @@
 // nuxt.config.ts
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['bootstrap/dist/css/bootstrap.min.css'],
+  css: [
+    '@/assets/css/variables.css',
+    '@/assets/css/global.css',
+    'bootstrap/dist/css/bootstrap.min.css',
+  ],
   plugins: [{ src: '~/plugins/bootstrap.client.ts', mode: 'client' }],
   runtimeConfig: {
     // Эти переменные будут доступны только на сервере
@@ -10,7 +14,7 @@ export default defineNuxtConfig({
     // Эти переменные будут доступны как на сервере, так и на клиенте
     public: {
       apiKey: process.env.API_KEY,
-      GITHUB_TOKEN: process.env.GITHUB_TOKEN
-    }
-  }
+      GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+    },
+  },
 });

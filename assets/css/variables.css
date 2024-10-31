@@ -1,0 +1,8 @@
+:root {
+    /* Цветовая палитра для тёмной темы */
+    --color-background: #121212;
+    --color-text: #e0e0e0;
+    --color-primary: #bb86fc;
+    --color-secondary: #03dac6;
+    --color-accent: #3700b3;
+}

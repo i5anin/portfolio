@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
