@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>{{ title }}</h3>
-    <div v-for="(skill, index) in sortedSkills" :key="index" class="mb-3">
+    <div v-for="(skill, index) in skillsWithIcons" :key="index" class="mb-3">
       <label :for="skill.name">
         <svg-icon type="mdi" :path="skill.icon" class="me-2" />
         {{ skill.name }}
@@ -24,6 +24,7 @@
 
 <script>
 import SvgIcon from '@jamescoyle/vue-icon';
+import * as mdiIcons from '@mdi/js';
 import { computed } from 'vue';
 
 export default {
@@ -42,12 +43,21 @@ export default {
     }
   },
   setup(props) {
+    // Компонент с иконками, назначаемыми внутри computed
+    const skillsWithIcons = computed(() => {
+      return props.skills.map(skill => ({
+        ...skill,
+        icon: mdiIcons[skill.icon] || mdiIcons.mdiHelp
+      }));
+    });
+
+    // Сортируем навыки по убыванию процента, если нужно
     const sortedSkills = computed(() => {
-      return [...props.skills].sort((a, b) => b.percentage - a.percentage);
+      return skillsWithIcons.value.sort((a, b) => b.percentage - a.percentage);
     });
 
     return {
-      sortedSkills
+      skillsWithIcons: sortedSkills
     };
   }
 };
