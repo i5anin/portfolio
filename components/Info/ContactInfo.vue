@@ -18,7 +18,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import SkillProgress from '~/components/skill/universal/SkillProgress.vue';
-import skillsData from '~/components/skill/data/skills.json';
+import skillsData from '~/components/data/skills.json';
 
 // Импорт всех доступных иконок из @mdi/js
 import * as mdiIcons from '@mdi/js';

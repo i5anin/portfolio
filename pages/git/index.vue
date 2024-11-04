@@ -16,16 +16,11 @@
 import github from '~/components/github/api/git.js';
 import { ref, onMounted } from 'vue';
 import RepositoryCard from '../../components/RepositoryCard.vue';
+import repoNames from '~/components/data/repositories.json'; // Импорт JSON-файла
 
 const repositories = ref([]);
 
 onMounted(async () => {
-  const repoNames = [
-    'vuejs/vue',            // Репозиторий Vue
-    'i5anin/portfolio',     // Ваш репозиторий
-    // ...другие репозитории
-  ];
-
   try {
     repositories.value = await github.getRepositoriesData(repoNames);
   } catch (error) {

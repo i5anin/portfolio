@@ -12,7 +12,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import SkillProgress from '~/components/skill/universal/SkillProgress.vue';
-import skillsData from '~/components/skill/data/skills.json';
+import skillsData from '~/components/data/skills.json';
 import * as mdiIcons from '@mdi/js';
 
 const skills = ref({ ...skillsData });

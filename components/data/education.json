@@ -1,0 +1,91 @@
+[
+  {
+    "institution": "ПФ-Форум",
+    "position": "Программист-разработчик",
+    "start_date": "2023-07-01",
+    "end_date": null,
+    "description": "Fullstack-разработчик",
+    "projects": [
+      {
+        "name": "Коммерческий проект по учёту инструмента",
+        "description": "Разработка софта для каталогизации, выдачи и отслеживания инструментов на производстве.",
+        "technologies": ["Vue 3", "JavaScript", "Node.js", "Express.js", "REST API", "PostgreSQL"]
+      },
+      {
+        "name": "Коммерческий проект телеграм-бота",
+        "description": "Телеграм-бот для получения данных и отображения статистики производства.",
+        "technologies": ["JavaScript", "REST API", "PHP", "MySQL"]
+      }
+    ],
+    "responsibilities": [
+      "Разрабатывал архитектуру проектов с нуля.",
+      "Использовал PostgreSQL для создания иерархической структуры папок и файлов для каталога.",
+      "Участвовал в полном цикле разработки, от проектирования до деплоя."
+    ],
+    "github": "https://github.com/i5anin"
+  },
+  {
+    "institution": "Skillbox",
+    "position": "Практика по Frontend разработке",
+    "start_date": "2022-08-01",
+    "end_date": "2023-03-01",
+    "projects": [
+      {
+        "name": "Инвентарь drag-and-drop",
+        "description": "Реализация инвентаря с drag-and-drop на Vue3 и TypeScript.",
+        "github": "https://github.com/i5anin/drag-and-drop-inventory"
+      },
+      {
+        "name": "Биржевой стакан",
+        "description": "Взаимодействие с API Binance и реализация биржевого стакана с использованием Vue3 и Element Plus.",
+        "github": "https://github.com/i5anin/order-book.vue3"
+      },
+      {
+        "name": "ToDoList",
+        "description": "Простой ToDoList с использованием Vue3 и Firebase.",
+        "github": "https://github.com/i5anin/first_todo-list"
+      },
+      {
+        "name": "Магазин белья Moire",
+        "description": "Разработка интернет-магазина на Vue3.",
+        "github": "https://gitlab.com/sergey.isanin/exam_vue"
+      },
+      {
+        "name": "Coin банк BTC",
+        "description": "Проект на JavaScript с использованием Webpack.",
+        "github": "https://gitlab.com/sergey.isanin/final_javascript_pro"
+      },
+      {
+        "name": "CRM",
+        "description": "Создание CRM-системы на Vue3.",
+        "github": "https://gitlab.com/sergey.isanin/crm_final_vue"
+      }
+    ]
+  },
+  {
+    "institution": "ООО СК",
+    "position": "Программист-разработчик",
+    "start_date": "2022-05-01",
+    "end_date": "2022-09-01",
+    "projects": [
+      {
+        "name": "Business OZON Aliexpress API",
+        "description": "Проект для интеграции с API OZON и Aliexpress.",
+        "technologies": ["Vue3", "API"],
+        "github": "https://gitlab.com/sergey.isanin/salesk/-/tree/main/api-ozon-vue"
+      }
+    ]
+  },
+  {
+    "institution": "ООО Гусар",
+    "position": "Администратор Product Data Management",
+    "start_date": "2020-09-01",
+    "end_date": "2022-03-01",
+    "responsibilities": [
+      "Обеспечивал работоспособность систем CAD, PDM, PLM.",
+      "Настройка логики SWE-PDM и автоматизация создания файлов.",
+      "Ввод в промышленную эксплуатацию SOLIDWORKS PDM."
+    ],
+    "technologies": ["JavaScript", "Node.js", "NPM", "C#", "SQL"]
+  }
+]
