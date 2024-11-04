@@ -34,7 +34,7 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('~/assets/bg.jpg'); /* путь к вашему фоновому изображению */
+  background-image: url('~/assets/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,6 +51,7 @@ onMounted(() => {
 }
 
 .card {
+  flex-direction: row;
   display: flex;
   align-items: center;
   padding: 20px;
@@ -62,6 +63,7 @@ onMounted(() => {
 }
 
 .profile-photo {
+  flex-shrink: 0;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -70,6 +72,7 @@ onMounted(() => {
 
 .info {
   text-align: left;
+  flex: 1;
 }
 
 h2 {
