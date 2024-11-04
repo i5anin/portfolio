@@ -1,9 +1,10 @@
 <template>
+  <section class="mb-8">
+    <ProfileCard />
+  </section>
   <div class="container mx-auto p-8">
     <!-- Профиль -->
-    <section class="mb-8">
-      <ProfileCard />
-    </section>
+
 
     <!-- Навыки -->
     <section class="mb-8">

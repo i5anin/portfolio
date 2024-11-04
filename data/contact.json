@@ -1,7 +1,14 @@
 [
   {
-    "email": "i5anin@gmail.com",
-    "linkedin": "https://linkedin.com/in/i5anin",
-    "github": "https://github.com/i5anin"
+    "title": "Email",
+    "value": "i5anin@gmail.com"
+  },
+  {
+    "title": "LinkedIn",
+    "value": "https://linkedin.com/in/i5anin"
+  },
+  {
+    "title": "GitHub",
+    "value": "https://github.com/i5anin"
   }
 ]

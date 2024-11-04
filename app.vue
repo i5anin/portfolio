@@ -1,7 +1,4 @@
-<!-- app.vue -->
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtPage />
-  </div>
+  <NuxtPage />
+  <NuxtRouteAnnouncer />
 </template>

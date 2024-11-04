@@ -4,19 +4,22 @@
     <section class="contact-info mt-8">
       <h2 class="text-xl font-bold mb-2">Контактная информация</h2>
       <ul>
-        <li v-if="contact.email">Email: <a :href="`mailto:${contact.email}`">{{ contact.email }}</a></li>
-        <li v-if="contact.linkedin">LinkedIn: <a :href="contact.linkedin" target="_blank">{{ contact.linkedin }}</a></li>
-        <li v-if="contact.github">GitHub: <a :href="contact.github" target="_blank">{{ contact.github }}</a></li>
+        <li v-for="(item, index) in contact" :key="index">
+          <span>{{ item.title }}: </span>
+          <a :href="getContactLink(item)" target="_blank">{{ item.value }}</a>
+        </li>
       </ul>
     </section>
   </div>
 </template>
 
 <script setup>
-import rawContactData from '~/data/contact.json';
+import contact from '~/data/contact.json';
 
-// Извлекаем первый элемент массива, чтобы использовать его без индекса
-const contact = rawContactData[0];
+// Функция для создания ссылки (mailto для Email и прямая ссылка для других)
+const getContactLink = (item) => {
+  return item.title === "Email" ? `mailto:${item.value}` : item.value;
+};
 </script>
 
 <style scoped>

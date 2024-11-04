@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <div class="overlay"></div>
     <div class="card" v-if="profile">
       <img
         class="profile-photo"
@@ -28,11 +29,25 @@ onMounted(() => {
 
 <style scoped>
 .home {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f5f5f5;
+  background-image: url('~/assets/bg.jpg'); /* путь к вашему фоновому изображению */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* затемнение фона */
+  z-index: 1;
 }
 
 .card {
@@ -43,6 +58,7 @@ onMounted(() => {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 400px;
+  z-index: 2;
 }
 
 .profile-photo {
