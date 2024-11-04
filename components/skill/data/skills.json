@@ -1,0 +1,27 @@
+{
+  "frameworks": {
+    "title": "Фреймворки",
+    "skills": [
+      { "name": "Vue.js", "percentage": 80, "icon": "mdiVuejs" },
+      { "name": "Vuetify.js", "percentage": 80, "icon": "mdiVuetify" },
+      { "name": "Nuxt.js", "percentage": 30, "icon": "mdiNuxt" },
+      { "name": "React", "percentage": 5, "icon": "mdiReact" }
+    ]
+  },
+  "technologies": {
+    "title": "Технологии",
+    "skills": [
+      { "name": "JavaScript", "percentage": 85, "icon": "mdiLanguageJavascript" },
+      { "name": "HTML5", "percentage": 90, "icon": "mdiLanguageHtml5" },
+      { "name": "CSS3", "percentage": 80, "icon": "mdiLanguageCss3" }
+    ]
+  },
+  "tools": {
+    "title": "Инструменты",
+    "skills": [
+      { "name": "Git", "percentage": 85, "icon": "mdiGit" },
+      { "name": "Webpack", "percentage": 70, "icon": "mdiWebpack" },
+      { "name": "Docker", "percentage": 60, "icon": "mdiDocker" }
+    ]
+  }
+}

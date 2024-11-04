@@ -10,6 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@jamescoyle/vue-icon": "^0.1.2",
+    "@mdi/js": "^7.4.47",
     "@popperjs/core": "^2.11.8",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
