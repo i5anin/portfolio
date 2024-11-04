@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     public: {
       apiKey: process.env.API_KEY,
       GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+      YANDEX_METRIKA_ID: '98816322',
     },
   },
 });
