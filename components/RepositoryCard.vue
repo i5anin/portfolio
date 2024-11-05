@@ -1,8 +1,10 @@
-<!-- components/RepositoryCard.vue -->
 <template>
   <div class="repository-card">
     <h2>{{ repository.name }}</h2>
-    <p>Количество коммитов: {{ repository.commitCount || 'Неизвестно' }}</p>
+    <p>Количество коммитов:
+      <span v-if="repository.commitCount !== null">{{ repository.commitCount }}</span>
+      <span v-else class="placeholder-glow"><span class="placeholder col-3"></span></span>
+    </p>
     <p>Дата последнего коммита: {{ latestCommitDate || 'Неизвестно' }}</p>
     <div v-if="repository.latestCommit">
       <p><strong>Последний коммит:</strong></p>
@@ -37,7 +39,7 @@ export default {
 
 <style scoped>
 .repository-card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--bs-border-color, #ddd); /* Поддержка темной темы */
   padding: 16px;
   margin: 8px;
   border-radius: 8px;

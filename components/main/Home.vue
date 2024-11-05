@@ -1,7 +1,8 @@
 <template>
-  <div class="home" >
+  <div class="home bg-dark text-light">
+    <div class="overlay"></div>
     <div>
-      <div class="card" v-if="profile">
+      <div class="card bg-body text-body" v-if="profile">
         <img
           class="profile-photo"
           src="https://avatars.githubusercontent.com/u/92434473?v=4"
@@ -47,7 +48,7 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* затемнение фона */
+  background-color: rgba(0, 0, 0, 0.7); /* затемнение фона */
   z-index: 1;
 }
 
@@ -56,7 +57,6 @@ onMounted(() => {
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 400px;
@@ -85,11 +85,11 @@ h2 {
 .title {
   margin: 5px 0;
   font-size: 16px;
-  color: #666;
+  color: #999; /* более светлый оттенок для темной темы */
 }
 
 .description {
   font-size: 14px;
-  color: #333;
+  color: #ccc; /* более светлый оттенок для темной темы */
 }
 </style>

@@ -6,31 +6,41 @@
         v-for="repo in repositories"
         :key="repo.full_name"
         :repository="repo"
-        class="bg-white rounded-lg shadow p-4"
+        class="rounded-lg shadow p-4"
       />
     </div>
 
-    <div v-else class="text-gray-500">
+    <div v-else class="text-body-secondary">
       <p>Не удалось загрузить данные о репозиториях.</p>
     </div>
   </div>
 </template>
 
+
 <script setup>
 import { ref, onMounted } from 'vue';
 import RepositoryCard from '../RepositoryCard.vue';
-import { getRepositoriesData } from '~/components/github/api/git.js';
+import { getBasicRepoInfo, getCommitCount } from '~/components/github/api/git.js';
 import repoNames from '~/data/repositories.json';
 
 const repositories = ref([]);
 
 onMounted(async () => {
   try {
-    repositories.value = await getRepositoriesData(repoNames);
+    const basicRepoData = await getBasicRepoInfo(repoNames);
+    repositories.value = basicRepoData;
+
+    // Загружаем количество коммитов в фоновом режиме
+    basicRepoData.forEach(async (repo) => {
+      const commitCount = await getCommitCount(repo.full_name);
+      const targetRepo = repositories.value.find((r) => r.full_name === repo.full_name);
+      if (targetRepo) targetRepo.commitCount = commitCount;
+    });
   } catch (error) {
     console.error('Ошибка при загрузке данных репозиториев:', error.message);
   }
 });
+
 </script>
 
 <style scoped>
