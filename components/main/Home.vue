@@ -1,16 +1,17 @@
 <template>
-  <div class="home">
-    <div class="overlay"></div>
-    <div class="card" v-if="profile">
-      <img
-        class="profile-photo"
-        src="https://avatars.githubusercontent.com/u/92434473?v=4"
-        alt="Фото профиля"
-      />
-      <div class="info">
-        <h2>{{ profile.name }}</h2>
-        <p class="title">{{ profile.title }}</p>
-        <p class="description">{{ profile.description }}</p>
+  <div class="home" >
+    <div>
+      <div class="card" v-if="profile">
+        <img
+          class="profile-photo"
+          src="https://avatars.githubusercontent.com/u/92434473?v=4"
+          alt="Фото профиля"
+        />
+        <div class="info">
+          <h2>{{ profile.name }}</h2>
+          <p class="title">{{ profile.title }}</p>
+          <p class="description">{{ profile.description }}</p>
+        </div>
       </div>
     </div>
   </div>

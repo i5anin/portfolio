@@ -1,9 +1,14 @@
+<!-- В файле app.vue -->
 <template>
-  <NuxtPage />
-  <NuxtRouteAnnouncer />
-  <noscript v-if="yandexMetrikaId">
-    <div><img :src="`https://mc.yandex.ru/watch/${yandexMetrikaId}`" style="position:absolute; left:-9999px;" alt="" /></div>
-  </noscript>
+  <div data-bs-theme="dark">
+    <NuxtPage />
+    <NuxtRouteAnnouncer />
+    <noscript v-if="yandexMetrikaId">
+      <div>
+        <img :src="`https://mc.yandex.ru/watch/${yandexMetrikaId}`" style="position:absolute; left:-9999px;" alt="" />
+      </div>
+    </noscript>
+  </div>
 </template>
 
 <script setup>
