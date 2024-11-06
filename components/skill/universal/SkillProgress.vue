@@ -13,12 +13,12 @@
           <svg-icon type="mdi" :path="expandedIndexes.includes(index) ? mdiIcons.mdiChevronUp : mdiIcons.mdiChevronDown" />
         </button>
 
-        <label :for="skill.name" class="d-flex align-items-center me-2 mb-0">
+        <label :for="skill.name" class="skill-name d-flex align-items-center mb-0">
           <svg-icon type="mdi" :path="skill.icon" class="me-2" />
           {{ skill.name }}
         </label>
 
-        <div class="progress flex-grow-1">
+        <div class="progress flex-grow-1 ms-2">
           <div
             class="progress-bar"
             role="progressbar"
@@ -96,6 +96,10 @@ export default {
 <style scoped>
 .progress {
   height: 25px;
+}
+
+.skill-name {
+  min-width: 100px; /* Фиксированная ширина для выравнивания */
 }
 
 .me-2 {
