@@ -2,26 +2,171 @@
   "frameworks": {
     "title": "Фреймворки",
     "skills": [
-      { "name": "Vue.js", "percentage": 80, "icon": "mdiVuejs" },
-      { "name": "Vuetify.js", "percentage": 80, "icon": "mdiVuetify" },
-      { "name": "Nuxt.js", "percentage": 30, "icon": "mdiNuxt" },
-      { "name": "React", "percentage": 5, "icon": "mdiReact" }
+      {
+        "name": "Vue.js",
+        "percentage": 80,
+        "icon": "mdiVuejs",
+        "subskills": [
+          {
+            "title": "Основы JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+          },
+          {
+            "title": "MDN JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "title": "Современный учебник JavaScript",
+            "link": "https://learn.javascript.ru/"
+          }
+        ]
+      },
+      {
+        "name": "Vuetify.js",
+        "percentage": 80,
+        "icon": "mdiVuetify",
+        "subskills": [
+          {
+            "title": "Основы JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+          },
+          {
+            "title": "MDN JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "title": "Современный учебник JavaScript",
+            "link": "https://learn.javascript.ru/"
+          }
+        ]
+      },
+      {
+        "name": "Nuxt.js",
+        "percentage": 30,
+        "icon": "mdiNuxt",
+        "subskills": [
+          {
+            "title": "Основы JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+          },
+          {
+            "title": "MDN JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "title": "Современный учебник JavaScript",
+            "link": "https://learn.javascript.ru/"
+          }
+        ]
+      },
+      {
+        "name": "React",
+        "percentage": 5,
+        "icon": "mdiReact",
+        "subskills": [
+          {
+            "title": "Основы JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+          },
+          {
+            "title": "MDN JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "title": "Современный учебник JavaScript",
+            "link": "https://learn.javascript.ru/"
+          }
+        ]
+      }
     ]
   },
   "technologies": {
     "title": "Технологии",
     "skills": [
-      { "name": "JavaScript", "percentage": 85, "icon": "mdiLanguageJavascript" },
-      { "name": "HTML5", "percentage": 90, "icon": "mdiLanguageHtml5" },
-      { "name": "CSS3", "percentage": 80, "icon": "mdiLanguageCss3" }
+      {
+        "name": "JavaScript",
+        "percentage": 85,
+        "icon": "mdiLanguageJavascript",
+        "subskills": [
+          {
+            "title": "Основы JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+          },
+          {
+            "title": "MDN JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "title": "Современный учебник JavaScript",
+            "link": "https://learn.javascript.ru/"
+          }
+        ]
+      },
+      {
+        "name": "HTML5",
+        "percentage": 90,
+        "icon": "mdiLanguageHtml5",
+        "subskills": [
+          {
+            "title": "Основы JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+          },
+          {
+            "title": "MDN JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "title": "Современный учебник JavaScript",
+            "link": "https://learn.javascript.ru/"
+          }
+        ]
+      },
+      {
+        "name": "CSS3",
+        "percentage": 80,
+        "icon": "mdiLanguageCss3",
+        "subskills": [
+          {
+            "title": "Основы JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+          },
+          {
+            "title": "MDN JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "title": "Современный учебник JavaScript",
+            "link": "https://learn.javascript.ru/"
+          }
+        ]
+      }
     ]
   },
   "tools": {
     "title": "Инструменты",
     "skills": [
-      { "name": "Git", "percentage": 85, "icon": "mdiGit" },
-      { "name": "Webpack", "percentage": 70, "icon": "mdiWebpack" },
-      { "name": "Docker", "percentage": 60, "icon": "mdiDocker" }
+      {
+        "name": "Git",
+        "percentage": 85,
+        "icon": "mdiGit",
+        "subskills": [
+          {
+            "title": "Основы JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+          }
+        ]
+      },
+      {
+        "name": "Webpack",
+        "percentage": 70,
+        "icon": "mdiWebpack",
+        "subskills": [
+          {
+            "title": "Основы JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+          }
+        ]
+      }
     ]
   }
 }
