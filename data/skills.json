@@ -165,21 +165,21 @@
         ]
       },
       {
-        "name": "Webpack",
+        "name": "Vite",
         "percentage": 70,
-        "icon": "mdiWebpack",
+        "icon": "mdiVite",
         "subskills": [
           {
-            "title": "Основы Webpack",
-            "link": "https://webpack.js.org/concepts/"
+            "title": "Основы Vite",
+            "link": "https://vitejs.dev/guide/"
           },
           {
-            "title": "Конфигурация Webpack",
-            "link": "https://webpack.js.org/configuration/"
+            "title": "Конфигурация Vite",
+            "link": "https://vitejs.dev/config/"
           },
           {
-            "title": "Оптимизация сборки в Webpack",
-            "link": "https://webpack.js.org/guides/production/"
+            "title": "Плагины в Vite",
+            "link": "https://vitejs.dev/guide/using-plugins.html"
           }
         ]
       }
