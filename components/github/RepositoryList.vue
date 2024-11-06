@@ -17,8 +17,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import RepositoryCard from '../RepositoryCard.vue';
-import { getBasicRepoInfo, updateCommitData } from '~/components/github/api/git.js';
+import RepositoryCard from './RepositoryCard.vue';
+import { getBasicRepoInfo, updateCommitData } from '~/components/github/api/github.js';
 import repoNames from '~/data/repositories.json';
 
 const repositories = ref([]);

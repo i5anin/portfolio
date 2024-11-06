@@ -1,5 +1,6 @@
 <template>
   <div class="home bg-dark text-light">
+    <Header />
     <div class="overlay"></div>
     <div>
       <div class="card bg-body text-body" v-if="profile">
@@ -21,6 +22,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import profileData from '~/data/about.json';
+import Header from './Navbar.vue';
 
 const profile = ref(null);
 

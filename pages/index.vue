@@ -1,13 +1,11 @@
 <template>
-  <section class="mb-8">
+  <section id="profile" class="mb-8">
     <ProfileCard />
   </section>
+
   <div class="container mx-auto p-8">
-    <!-- Профиль -->
-
-
     <!-- Навыки -->
-    <section class="mb-8">
+    <section id="skills" class="mb-8">
       <h1 class="display-3 text-center pt-10">Навыки</h1>
       <SkillProgress
         v-for="(category, index) in skills"
@@ -18,17 +16,18 @@
     </section>
 
     <!-- Репозитории -->
-    <section class="mb-8">
+    <section id="projects" class="mb-8">
       <h1 class="display-5 text-center pt-10">Проекты</h1>
       <RepositoryList />
     </section>
 
     <!-- Контакты -->
-    <section>
+    <section id="contact">
       <ContactInfo />
     </section>
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted } from 'vue';
