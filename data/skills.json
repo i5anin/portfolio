@@ -23,7 +23,7 @@
       },
       {
         "name": "Vuetify.js",
-        "percentage": 80,
+        "percentage": 70,
         "icon": "mdiVuetify",
         "subskills": [
           {
@@ -58,25 +58,6 @@
             "link": "https://nuxtjs.org/docs/directory-structure/modules"
           }
         ]
-      },
-      {
-        "name": "React",
-        "percentage": 5,
-        "icon": "mdiReact",
-        "subskills": [
-          {
-            "title": "Основы React",
-            "link": "https://react.dev/learn"
-          },
-          {
-            "title": "Документация по React",
-            "link": "https://react.dev/"
-          },
-          {
-            "title": "Справочник по хукам React",
-            "link": "https://react.dev/reference/react"
-          }
-        ]
       }
     ]
   },
@@ -85,7 +66,7 @@
     "skills": [
       {
         "name": "JavaScript",
-        "percentage": 85,
+        "percentage": 80,
         "icon": "mdiLanguageJavascript",
         "subskills": [
           {
@@ -104,7 +85,7 @@
       },
       {
         "name": "HTML5",
-        "percentage": 90,
+        "percentage": 75,
         "icon": "mdiLanguageHtml5",
         "subskills": [
           {
@@ -123,7 +104,7 @@
       },
       {
         "name": "CSS3",
-        "percentage": 80,
+        "percentage": 70,
         "icon": "mdiLanguageCss3",
         "subskills": [
           {
@@ -147,12 +128,16 @@
     "skills": [
       {
         "name": "Git",
-        "percentage": 85,
+        "percentage": 65,
         "icon": "mdiGit",
         "subskills": [
           {
             "title": "Основы Git",
             "link": "https://git-scm.com/doc"
+          },
+          {
+            "title": "Соглашение о коммитах",
+            "link": "https://www.conventionalcommits.org/ru/v1.0.0/"
           },
           {
             "title": "Продвинутые команды Git",
@@ -166,8 +151,8 @@
       },
       {
         "name": "Vite",
-        "percentage": 70,
-        "icon": "mdiVite",
+        "percentage": 60,
+        "icon": "mdiVuetify",
         "subskills": [
           {
             "title": "Основы Vite",

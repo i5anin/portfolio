@@ -8,7 +8,7 @@
 
     <!-- Навыки -->
     <section class="mb-8">
-      <h2 class="section-title">Навыки</h2>
+      <h1 class="display-3 text-center pt-10">Навыки</h1>
       <SkillProgress
         v-for="(category, index) in skills"
         :key="index"
@@ -19,13 +19,12 @@
 
     <!-- Репозитории -->
     <section class="mb-8">
-      <h2 class="section-title">Проекты</h2>
+      <h1 class="display-5 text-center pt-10">Проекты</h1>
       <RepositoryList />
     </section>
 
     <!-- Контакты -->
     <section>
-      <h2 class="section-title">Контактная информация</h2>
       <ContactInfo />
     </section>
   </div>
@@ -34,7 +33,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import ProfileCard from '~/components/main/Home.vue';
-import SkillProgress from '~/components/skill/universal/SkillProgress.vue';
+import SkillProgress from '~/components/skill/SkillProgress.vue';
 import RepositoryList from '~/components/github/RepositoryList.vue';
 import ContactInfo from '~/components/Info/ContactInfo.vue';
 import skillsData from '~/data/skills.json';

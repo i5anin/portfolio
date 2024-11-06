@@ -1,8 +1,7 @@
 <template>
   <div class="container mx-auto p-4">
-    <!-- Контактная информация -->
     <section class="contact-info mt-8">
-      <h2 class="text-xl font-bold mb-2">Контактная информация</h2>
+      <h1 class="display-4 text-center pt-10">Навыки</h1>
       <ul>
         <li v-for="(item, index) in contact" :key="index">
           <span>{{ item.title }}: </span>

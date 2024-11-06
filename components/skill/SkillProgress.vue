@@ -10,7 +10,9 @@
           :aria-expanded="expandedIndexes.includes(index)"
           aria-controls="subskills-list"
         >
-          <svg-icon type="mdi" :path="expandedIndexes.includes(index) ? mdiIcons.mdiChevronUp : mdiIcons.mdiChevronDown" />
+          <svg-icon color="green"
+                    type="mdi"
+                    :path="expandedIndexes.includes(index) ? mdiIcons.mdiChevronUp : mdiIcons.mdiChevronDown" />
         </button>
 
         <label :for="skill.name" class="skill-name d-flex align-items-center mb-0">
@@ -20,7 +22,7 @@
 
         <div class="progress flex-grow-1 ms-2">
           <div
-            class="progress-bar"
+            class="progress-bar bg-success"
             role="progressbar"
             :style="{ width: skill.percentage + '%' }"
             :aria-valuenow="skill.percentage"
@@ -34,7 +36,14 @@
 
       <ul v-if="expandedIndexes.includes(index)" id="subskills-list" class="mt-2">
         <li v-for="(subskill, subIndex) in skill.subskills" :key="subIndex">
-          <a :href="subskill.link" target="_blank" rel="noopener noreferrer">{{ subskill.title }}</a>
+          <p>
+            <a
+              :href="subskill.link"
+              target="_blank"
+              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+              {{ subskill.title }}
+            </a>
+          </p>
         </li>
       </ul>
     </div>
@@ -49,17 +58,17 @@ import { computed, ref } from 'vue';
 export default {
   name: 'SkillProgress',
   components: {
-    SvgIcon
+    SvgIcon,
   },
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     skills: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   setup(props) {
     const expandedIndexes = ref([]);
@@ -75,7 +84,7 @@ export default {
     const skillsWithIcons = computed(() => {
       return props.skills.map(skill => ({
         ...skill,
-        icon: mdiIcons[skill.icon] || mdiIcons.mdiHelp
+        icon: mdiIcons[skill.icon] || mdiIcons.mdiHelp,
       }));
     });
 
@@ -87,9 +96,9 @@ export default {
       skillsWithIcons: sortedSkills,
       expandedIndexes,
       toggleSubskills,
-      mdiIcons
+      mdiIcons,
     };
-  }
+  },
 };
 </script>
 
