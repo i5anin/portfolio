@@ -3,31 +3,35 @@
     <h3>{{ title }}</h3>
 
     <div v-for="(skill, index) in skillsWithIcons" :key="index" class="mb-3">
-      <button
-        @click="toggleSubskills(index)"
-        class="btn btn-link p-0 ms-2"
-        :aria-expanded="expandedIndexes.includes(index)"
-        aria-controls="subskills-list"
-      >
-        <svg-icon type="mdi" :path="expandedIndexes.includes(index) ? mdiIcons.mdiChevronUp : mdiIcons.mdiChevronDown" />
-      </button>
-      <label :for="skill.name" class="d-flex align-items-center">
-        <svg-icon type="mdi" :path="skill.icon" class="me-2" />
-        {{ skill.name }}
-      </label>
-      <div class="progress">
-        <div
-          class="progress-bar"
-          role="progressbar"
-          :style="{ width: skill.percentage + '%' }"
-          :aria-valuenow="skill.percentage"
-          aria-valuemin="0"
-          aria-valuemax="100"
+      <div class="d-flex align-items-center">
+        <button
+          @click="toggleSubskills(index)"
+          class="btn btn-link p-0 me-2"
+          :aria-expanded="expandedIndexes.includes(index)"
+          aria-controls="subskills-list"
         >
-          {{ skill.percentage }}%
-        </div>
+          <svg-icon type="mdi" :path="expandedIndexes.includes(index) ? mdiIcons.mdiChevronUp : mdiIcons.mdiChevronDown" />
+        </button>
 
+        <label :for="skill.name" class="d-flex align-items-center me-2 mb-0">
+          <svg-icon type="mdi" :path="skill.icon" class="me-2" />
+          {{ skill.name }}
+        </label>
+
+        <div class="progress flex-grow-1">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            :style="{ width: skill.percentage + '%' }"
+            :aria-valuenow="skill.percentage"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            {{ skill.percentage }}%
+          </div>
+        </div>
       </div>
+
       <ul v-if="expandedIndexes.includes(index)" id="subskills-list" class="mt-2">
         <li v-for="(subskill, subIndex) in skill.subskills" :key="subIndex">
           <a :href="subskill.link" target="_blank" rel="noopener noreferrer">{{ subskill.title }}</a>
