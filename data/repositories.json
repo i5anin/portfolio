@@ -2,5 +2,9 @@
   "vuejs/vue",
   "i5anin/portfolio",
   "i5anin/tools-soft__pf-forum",
-  "i5anin/i5anin"
+  "i5anin/i5anin",
+  "i5anin/drag-and-drop-inventory",
+  "i5anin/order-book.vue3",
+  "i5anin/vue-gym-training",
+  "i5anin/first-todo-list.vue"
 ]

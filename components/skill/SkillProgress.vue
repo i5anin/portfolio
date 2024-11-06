@@ -10,13 +10,15 @@
           :aria-expanded="expandedIndexes.includes(index)"
           aria-controls="subskills-list"
         >
-          <svg-icon color="green"
-                    type="mdi"
-                    :path="expandedIndexes.includes(index) ? mdiIcons.mdiChevronUp : mdiIcons.mdiChevronDown" />
+          <SvgIcon
+            color="green"
+            type="mdi"
+            :path="expandedIndexes.includes(index) ? mdiIcons.mdiChevronUp : mdiIcons.mdiChevronDown"
+          />
         </button>
 
         <label :for="skill.name" class="skill-name d-flex align-items-center mb-0">
-          <svg-icon type="mdi" :path="skill.icon" class="me-2" />
+          <SvgIcon type="mdi" :path="skill.icon" class="me-2" />
           {{ skill.name }}
         </label>
 
@@ -34,72 +36,68 @@
         </div>
       </div>
 
-      <ul v-if="expandedIndexes.includes(index)" id="subskills-list" class="mt-2">
-        <li v-for="(subskill, subIndex) in skill.subskills" :key="subIndex">
-          <p>
-            <a
-              :href="subskill.link"
-              target="_blank"
-              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-              {{ subskill.title }}
-            </a>
-          </p>
-        </li>
-      </ul>
+      <!-- Поднавыки отображаются как badge-значки с кликабельной ссылкой и иконкой -->
+      <div v-if="expandedIndexes.includes(index)" id="subskills-list" class="mt-2 d-flex flex-wrap gap-2">
+        <a
+          v-for="(subskill, subIndex) in skill.subskills"
+          :key="subIndex"
+          :href="subskill.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="badge rounded-pill text-bg-secondary d-flex align-items-center text-decoration-none"
+        >
+          {{ subskill.title }}
+          <SvgIcon color="black" type="mdi" :path="mdiIcons.mdiLink" class="small-icon ms-1" />
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, computed } from 'vue';
 import SvgIcon from '@jamescoyle/vue-icon';
 import * as mdiIcons from '@mdi/js';
-import { computed, ref } from 'vue';
 
-export default {
-  name: 'SkillProgress',
-  components: {
-    SvgIcon,
+// Props
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
   },
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    skills: {
-      type: Array,
-      required: true,
-    },
+  skills: {
+    type: Array,
+    required: true,
   },
-  setup(props) {
-    const expandedIndexes = ref([]);
+});
 
-    const toggleSubskills = index => {
-      if (expandedIndexes.value.includes(index)) {
-        expandedIndexes.value = expandedIndexes.value.filter(i => i !== index);
-      } else {
-        expandedIndexes.value.push(index);
-      }
-    };
+// Reactive state for expanded indexes
+const expandedIndexes = ref([]);
 
-    const skillsWithIcons = computed(() => {
-      return props.skills.map(skill => ({
-        ...skill,
-        icon: mdiIcons[skill.icon] || mdiIcons.mdiHelp,
-      }));
-    });
-
-    const sortedSkills = computed(() => {
-      return skillsWithIcons.value.sort((a, b) => b.percentage - a.percentage);
-    });
-
-    return {
-      skillsWithIcons: sortedSkills,
-      expandedIndexes,
-      toggleSubskills,
-      mdiIcons,
-    };
-  },
+// Method to toggle expanded subskills
+const toggleSubskills = (index) => {
+  if (expandedIndexes.value.includes(index)) {
+    expandedIndexes.value = expandedIndexes.value.filter((i) => i !== index);
+  } else {
+    expandedIndexes.value.push(index);
+  }
 };
+
+// Computed properties to process skills data
+const skillsWithIcons = computed(() => {
+  return props.skills.map((skill) => ({
+    ...skill,
+    icon: mdiIcons[skill.icon] || mdiIcons.mdiHelp,
+  }));
+});
+
+const sortedSkills = computed(() => {
+  return skillsWithIcons.value.sort((a, b) => b.percentage - a.percentage);
+});
+
+// Expose necessary variables to the template
+const mdiIconsRef = mdiIcons;
+
 </script>
 
 <style scoped>
@@ -115,12 +113,17 @@ export default {
   margin-right: 0.5rem;
 }
 
-ul {
-  padding-left: 1.25rem;
+/* Уменьшение размера иконки */
+.small-icon {
+  opacity: 0.5;
+  width: 16px;
+  height: 16px;
 }
 
-ul li {
-  list-style: none;
+#subskills-list {
+  display: flex;
+  flex-wrap: wrap; /* Перенос на новую строку при переполнении */
+  gap: 0.5rem;
 }
 
 button {
@@ -131,5 +134,11 @@ button {
 
 button:focus {
   outline: none;
+}
+
+/* Стилизация ссылки внутри badge */
+.badge a {
+  color: inherit;
+  text-decoration: none;
 }
 </style>
