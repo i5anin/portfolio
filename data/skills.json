@@ -8,16 +8,16 @@
         "icon": "mdiVuejs",
         "subskills": [
           {
-            "title": "Основы JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            "title": "Основы Vue.js",
+            "link": "https://vuejs.org/v2/guide/"
           },
           {
-            "title": "MDN JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            "title": "Документация по Vue 3",
+            "link": "https://vuejs.org/guide/introduction.html"
           },
           {
-            "title": "Современный учебник JavaScript",
-            "link": "https://learn.javascript.ru/"
+            "title": "Справочник API Vue 3",
+            "link": "https://vuejs.org/api/"
           }
         ]
       },
@@ -27,16 +27,16 @@
         "icon": "mdiVuetify",
         "subskills": [
           {
-            "title": "Основы JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            "title": "Документация по Vuetify",
+            "link": "https://vuetifyjs.com/en/getting-started/installation/"
           },
           {
-            "title": "MDN JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            "title": "Основы компонентов Vuetify",
+            "link": "https://vuetifyjs.com/en/components/api-explorer/"
           },
           {
-            "title": "Современный учебник JavaScript",
-            "link": "https://learn.javascript.ru/"
+            "title": "Стилизация и темы в Vuetify",
+            "link": "https://vuetifyjs.com/en/features/theme/"
           }
         ]
       },
@@ -46,16 +46,16 @@
         "icon": "mdiNuxt",
         "subskills": [
           {
-            "title": "Основы JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            "title": "Основы Nuxt.js",
+            "link": "https://nuxtjs.org/docs/get-started/installation"
           },
           {
-            "title": "MDN JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            "title": "Роутинг в Nuxt.js",
+            "link": "https://nuxtjs.org/docs/concepts/routing"
           },
           {
-            "title": "Современный учебник JavaScript",
-            "link": "https://learn.javascript.ru/"
+            "title": "Модульная архитектура Nuxt",
+            "link": "https://nuxtjs.org/docs/directory-structure/modules"
           }
         ]
       },
@@ -65,16 +65,16 @@
         "icon": "mdiReact",
         "subskills": [
           {
-            "title": "Основы JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            "title": "Основы React",
+            "link": "https://react.dev/learn"
           },
           {
-            "title": "MDN JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            "title": "Документация по React",
+            "link": "https://react.dev/"
           },
           {
-            "title": "Современный учебник JavaScript",
-            "link": "https://learn.javascript.ru/"
+            "title": "Справочник по хукам React",
+            "link": "https://react.dev/reference/react"
           }
         ]
       }
@@ -93,8 +93,8 @@
             "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
           },
           {
-            "title": "MDN JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            "title": "Справочник по JavaScript",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
           },
           {
             "title": "Современный учебник JavaScript",
@@ -108,16 +108,16 @@
         "icon": "mdiLanguageHtml5",
         "subskills": [
           {
-            "title": "Основы JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            "title": "Основы HTML5",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
           },
           {
-            "title": "MDN JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            "title": "Семантические элементы HTML",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
           },
           {
-            "title": "Современный учебник JavaScript",
-            "link": "https://learn.javascript.ru/"
+            "title": "Лучшие практики HTML",
+            "link": "https://web.dev/learn/html/"
           }
         ]
       },
@@ -127,16 +127,16 @@
         "icon": "mdiLanguageCss3",
         "subskills": [
           {
-            "title": "Основы JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            "title": "Основы CSS",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
           },
           {
-            "title": "MDN JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            "title": "Flexbox и Grid",
+            "link": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
           },
           {
-            "title": "Современный учебник JavaScript",
-            "link": "https://learn.javascript.ru/"
+            "title": "Анимации в CSS",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations"
           }
         ]
       }
@@ -151,8 +151,16 @@
         "icon": "mdiGit",
         "subskills": [
           {
-            "title": "Основы JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            "title": "Основы Git",
+            "link": "https://git-scm.com/doc"
+          },
+          {
+            "title": "Продвинутые команды Git",
+            "link": "https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging"
+          },
+          {
+            "title": "Git Flow",
+            "link": "https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow"
           }
         ]
       },
@@ -162,8 +170,16 @@
         "icon": "mdiWebpack",
         "subskills": [
           {
-            "title": "Основы JavaScript",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            "title": "Основы Webpack",
+            "link": "https://webpack.js.org/concepts/"
+          },
+          {
+            "title": "Конфигурация Webpack",
+            "link": "https://webpack.js.org/configuration/"
+          },
+          {
+            "title": "Оптимизация сборки в Webpack",
+            "link": "https://webpack.js.org/guides/production/"
           }
         ]
       }
